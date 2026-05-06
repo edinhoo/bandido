@@ -5,13 +5,20 @@ import type { MatrixType } from "@/types";
 type TileSlotProps = {
   matrix?: MatrixType;
   active?: boolean;
+  valid?: boolean;
   onClick?: () => void;
 };
 
-export function TileSlot({ active, onClick }: TileSlotProps) {
+export function TileSlot({ active, valid, onClick }: TileSlotProps) {
+  const borderClass = valid
+    ? "border-lime-500!"
+    : active
+      ? "border-white!"
+      : "ring-muted border-transparent!";
+
   return (
     <Card
-      className={`w-full py-0 bg-background cursor-pointer transition-colors ${active ? "border-white!" : "ring-muted border-transparent!"}`}
+      className={`w-full py-0 bg-background cursor-pointer transition-colors ${borderClass}`}
       onClick={onClick}
     >
       <CardContent className="px-0">
