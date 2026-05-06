@@ -6,7 +6,7 @@ export default function Home() {
   const grid = Math.ceil((TILES.length + 2) / 2);
 
   return (
-    <main className="h-screen overflow-hidden p-6">
+    <main className="h-screen overflow-hidden p-6 flex flex-col gap-6">
       <BoardGame width={grid} height={grid} />
     </main>
   )

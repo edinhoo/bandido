@@ -6,3 +6,5 @@ export type TileType = {
   id: IdType;
   matrix: MatrixType;
 };
+
+export type CenterBoardGameHandleType = { centerOnMain: () => void }
