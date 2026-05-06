@@ -100,6 +100,8 @@ export const TILE_11: TileType = {
   ],
 };
 
+export const MAIN_TILE: TileType = TILE_11;
+
 export const TILES: TileType[] = [
   ...Array.from({ length: 21 }, (_, i) => ({ ...TILE_01, id: `${TILE_01.id}-${i}` })),
   ...Array.from({ length: 19 }, (_, i) => ({ ...TILE_02, id: `${TILE_02.id}-${i}` })),
@@ -111,5 +113,5 @@ export const TILES: TileType[] = [
   ...Array.from({ length: 5 }, (_, i) => ({ ...TILE_08, id: `${TILE_08.id}-${i}` })),
   ...Array.from({ length: 21 }, (_, i) => ({ ...TILE_09, id: `${TILE_09.id}-${i}` })),
   ...Array.from({ length: 12 }, (_, i) => ({ ...TILE_10, id: `${TILE_10.id}-${i}` })),
-  ...Array.from({ length: 11 }, (_, i) => ({ ...TILE_11, id: `${TILE_11.id}-${i}` })),
+  ...Array.from({ length: 9 }, (_, i) => ({ ...TILE_11, id: `${TILE_11.id}-${i}` })),
 ]
