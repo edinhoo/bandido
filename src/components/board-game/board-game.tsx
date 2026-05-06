@@ -2,8 +2,8 @@
 
 import { useRef } from "react";
 
-import { BoardGameControls } from "./board-game-controls";
 import { BoardGameGrid } from "@/components/board-game";
+import { BoardGameControls } from "./board-game-controls";
 
 import type { CenterBoardGameHandleType } from "@/types";
 

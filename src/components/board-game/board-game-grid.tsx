@@ -83,6 +83,7 @@ function BoardGameGridComponent(
                       <div
                         key={i}
                         data-main-tile-left=""
+                        className="w-full [&>button]:w-full [&>button]:block"
                       >
                         <Tile matrix={MAIN_TILE.matrix} />
                       </div>
@@ -94,6 +95,7 @@ function BoardGameGridComponent(
                       <div
                         key={i}
                         data-main-tile-right=""
+                        className="w-full [&>button]:w-full [&>button]:block"
                       >
                         <Tile matrix={MAIN_TILE.matrix} />
                       </div>
@@ -104,7 +106,6 @@ function BoardGameGridComponent(
                 }
               )}
             </div>
-
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
         </div>

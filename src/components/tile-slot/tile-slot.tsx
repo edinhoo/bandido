@@ -1,9 +1,20 @@
 import { Card, CardContent } from "@/components/ui/8bit/card";
 
-export function TileSlot() {
+import type { MatrixType } from "@/types";
+
+type TileSlotProps = {
+  matrix?: MatrixType;
+  active?: boolean;
+  onClick?: () => void;
+};
+
+export function TileSlot({ active, onClick }: TileSlotProps) {
   return (
-    <Card className="w-full py-0 border-transparent! ring-muted bg-background snap-center">
-      <CardContent className="px-0 ">
+    <Card
+      className={`w-full py-0 bg-background cursor-pointer transition-colors ${active ? "border-white!" : "ring-muted border-transparent!"}`}
+      onClick={onClick}
+    >
+      <CardContent className="px-0">
         <div className="w-18 h-18 flex items-center justify-center text-secondary">
           <span className="text-4xl">?</span>
         </div>
